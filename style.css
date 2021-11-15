@@ -1,0 +1,48 @@
+.heading{
+    font-size: 23px;
+    width:100%;
+    margin: 0px;
+    background-color: lightgreen;
+    color: maroon;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height:70px;
+}
+
+.note{
+    font-size: 15px;
+    color:black;
+}
+
+body{
+    background-size: cover;
+}
+
+.div_speed{
+    float:left;
+    margin-left: 20px;
+}
+.div_speed_img , .div_volume_img{
+    width:200px;
+    border-radius: 100px;
+}
+
+#speed , #volume{
+    font-size: 23px;
+    margin:15px;
+}
+.div_volume{
+    float:right;
+    margin-right: 20px;
+}
+b{
+    color:red;
+}
+.play_button{
+    width:130px;
+    font-size:25px;
+    margin-top: 0px;
+}
+canvas{
+    border:5px solid white;
+    border-radius: 20px;
+}
