@@ -1,5 +1,13 @@
 song = "";
 
+leftWristX = 0;
+leftWristY = 0;
+
+rightWristX = 0;
+rightWristY = 0;
+
+
+
 function preload() {
     song = loadSound("music.mp3");
 
@@ -13,6 +21,34 @@ function setup(){
 
     video = createCapture(VIDEO);
     video.hide();
+
+    poseNet = ml5.poseNet(video , modelLoaded);
+    poseNet.on('pose', gotPoses);
+}
+
+
+function gotPoses(results){
+    if (results.length>0) {
+        console.log(results);
+        
+
+        leftWristX = results[0].pose.leftWrist.X;
+        leftWristY = results[0].pose.leftWrist.Y;
+        console.log(" leftWristX = "+leftWristX +  " leftWristY = " + leftWristY);
+
+        righttWristX = results[0].pose.righttWrist.X;
+        rightWristY = results[0].pose.rightWrist.Y;
+        console.log(" leftWristX = "+rightWristX +  " leftWristY = " + rightWristY);
+
+        
+
+    } 
+        
+    
+}
+
+function modelLoaded(){
+    console.log("poseNet is initialized")
 }
 
 
@@ -22,5 +58,7 @@ function draw(){
 
 function play() {
     song.play();
+    song.setVolume(1);
+    song.rate(1);
     
 }
