@@ -28,16 +28,16 @@ function setup(){
 
 
 function gotPoses(results){
-    if (results.length>0) {
+    if (results.length > 0) {
         console.log(results);
         
 
-        leftWristX = results[0].pose.leftWrist.X;
-        leftWristY = results[0].pose.leftWrist.Y;
+        leftWristX = results[0].pose.leftWrist.x;
+        leftWristY = results[0].pose.leftWrist.y;
         console.log(" leftWristX = "+leftWristX +  " leftWristY = " + leftWristY);
 
-        righttWristX = results[0].pose.righttWrist.X;
-        rightWristY = results[0].pose.rightWrist.Y;
+        rightWristX = results[0].pose.rightWrist.x;
+        rightWristY = results[0].pose.rightWrist.y;
         console.log(" leftWristX = "+rightWristX +  " leftWristY = " + rightWristY);
 
         
