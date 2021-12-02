@@ -75,21 +75,21 @@ function draw(){
     
         } 
         else if (rightWristY > 100 && rightWristY<= 200) {
-            document.getElementById("speed").innetHTML = "Speed = 1x";
+            document.getElementById("speed").innerHTML = "Speed = 1x";
             song.rate(1);
         }
         
         else if (rightWristY > 200 && rightWristY<= 300) {
-            document.getElementById("speed").innetHTML = "Speed = 1.5x";
+            document.getElementById("speed").innerHTML = "Speed = 1.5x";
             song.rate(1.5);
         }
     
         else if (rightWristY > 300 && rightWristY<= 400) {
-            document.getElementById("speed").innetHTML = "Speed = 2x";
+            document.getElementById("speed").innerHTML = "Speed = 2x";
             song.rate(2);
         }
         else if (rightWristY > 400) {
-            document.getElementById("speed").innetHTML = "Speed = 2.5x";
+            document.getElementById("speed").innerHTML = "Speed = 2.5x";
             song.rate(2.5);
         }
     }
